@@ -54,7 +54,7 @@ Instalación con pip:
 
 ```python
 git clone <URL_REPO>
-cd easyMoney_TFM
+cd TFM_Easy_Money
 python -m venv .venv
 .venv\Scripts\activate    # Windows
 source .venv/bin/activate # Linux/Mac
