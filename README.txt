@@ -1,55 +1,94 @@
-Proyecto Final TFM – easyMoney
-Máster en Data Science & AI – Nuclio Digital School
-Este repositorio contiene los archivos entregados para la defensa final del Trabajo Fin de Máster (TFM) titulado “easyMoney: Rentabilización de la base de clientes mediante analítica avanzada y segmentación predictiva”. El objetivo del proyecto es aplicar técnicas de análisis de datos, modelado predictivo y segmentación de clientes para diseñar estrategias de rentabilidad y crecimiento basadas en datos.
+# Proyecto Final TFM — easyMoney
+**Máster en Data Science & AI – Nuclio Digital School**
 
-📂 Estructura de archivos
-Notebooks de análisis y modelado
-    1 Limpieza_BD_y_Feature_Engineering.ipynb
-        ◦ Integra los 5 dataframes originales de la base de datos.
-        ◦ Realiza un análisis exploratorio rápido (EDA), limpieza e imputación de nulos.
-        ◦ Evalúa productos a nivel de ventas, clientes y rentabilidad.
-        ◦ Desarrolla el feature engineering utilizado posteriormente en los modelos de propensión y clustering.
-    2 M1_em_account_Propensión_Compra.ipynb
-        ◦ Modelo de predicción de propensión de compra para el producto Cuenta EasyMoney.
-        ◦ Incluye preprocesamiento, rebalanceo, competición de modelos, ajuste de hiperparámetros y predicción final.
-    3 M2_emc_account_Propensión_Compra.ipynb
-        ◦ Modelo de propensión de compra para el producto Cuenta EasyMoney Crypto, con la misma estructura metodológica que el anterior.
-    4 M3_pension_plan_Propensión_Compra.ipynb
-        ◦ Modelo predictivo para Planes de Pensiones, orientado a clientes senior o conservadores.
-    5 M4_long_term_deposit_Propensión_Compra.ipynb
-        ◦ Modelo predictivo para Depósitos a Largo Plazo, considerando rentabilidad esperada por cliente.
-    6 M5_debit_card_Propensión_Compra.ipynb
-        ◦ Modelo predictivo para Tarjeta de Débito, enfocado en clientes sin productos básicos activos.
-    7 Clustering_Model.ipynb
-        ◦ Desarrollo del modelo de segmentación de clientes mediante K-Means.
-        ◦ Selección de features relevantes y determinación óptima de 5 clusters a partir del método del codo (Elbow Curve).
-    8 Business_Proposal.ipynb
-        ◦ Simulación y diseño de campañas comerciales basadas en los resultados de propensión y clusters.
-        ◦ Cálculo de costes, beneficios y ROI esperado bajo escenarios pesimista, realista y optimista.
+## 📌 Descripción del proyecto
+El objetivo del TFM **“easyMoney: Rentabilización de la base de clientes mediante analítica avanzada y segmentación predictiva”** es aplicar técnicas de **análisis de datos, modelado predictivo y segmentación de clientes** para diseñar estrategias de rentabilidad y crecimiento basadas en datos.
 
-Otros archivos del proyecto
-    9 requirements.txt
-        ◦         •Lista de librerías y versiones de Python necesarias para ejecutar los notebooks.
-    10 Dashboard easyMoney.pbix
-    • Dashboard interactivo de Power BI que muestra la situación actual de la empresa, métricas de ventas, clientes y productos.
-    11 Memoria TFM.pdf
-    • Documento académico que detalla los objetivos, metodología, resultados y conclusiones del proyecto.
-    12 Presentación.pdf
-    • Presentación ejecutiva para stakeholders, utilizada en la defensa del TFM.
-    • Incluye las campañas propuestas, impacto estimado y recomendaciones estratégicas.
+Se busca:
 
-Instrucciones básicas de ejecución
-    1 Crear un entorno virtual y activar.
-    2 Instalar dependencias con: pip install -r requirements.txt
-    3 Ejecutar los notebooks en el siguiente orden sugerido:
-        1 Limpieza_BD_y_Feature_Engineering.ipynb
-        2 M1–M5 notebooks de propensión
-        3 Clustering_Model.ipynb
-        4 Business_Proposal.ipynb
+- Analizar el comportamiento de los clientes y productos.  
+- Predecir la propensión de compra de distintos productos financieros.  
+- Segmentar la base de clientes en clusters relevantes para campañas comerciales.  
+- Generar recomendaciones estratégicas y estimaciones de ROI.
 
-Autores
+---
+
+## 📂 Estructura del repositorio
+
+
+``` python
+TFM_Easy_Money/
+
+├── notebooks/
+
+│ ├── 1_Limpieza_BD_y_Feature_Engineering.ipynb
+
+│ ├── 2_M1_em_account_Propensión_Compra.ipynb
+
+│ ├── 3_M2_emc_account_Propensión_Compra.ipynb
+
+│ ├── 4_M3_pension_plan_Propensión_Compra.ipynb
+
+│ ├── 5_M4_long_term_deposit_Propensión_Compra.ipynb
+
+│ ├── 6_M5_debit_card_Propensión_Compra.ipynb
+
+│ ├── 7_Clustering_Model.ipynb
+
+│ └── 8_Business_Proposal.ipynb
+
+├── requirements.txt # Librerías  necesarias
+
+└── Presentación.pdf # Presentación ejecutiva para stakeholders
+
+```
+
+---
+
+## ⚙️ Requisitos e instalación
+
+- Python 3.8+ (recomendable 3.9)  
+- Crear un entorno virtual (`venv` o `conda`)  
+
+Instalación con pip:
+
+```python
+git clone <URL_REPO>
+cd easyMoney_TFM
+python -m venv .venv
+.venv\Scripts\activate    # Windows
+source .venv/bin/activate # Linux/Mac
+pip install -r requirements.txt
+```
+
+ ## 📝 Cómo ejecutar los notebooks
+
+**1_Limpieza_BD_y_Feature_Engineering.ipynb**  
+Este notebook integra todos los dataframes originales, 
+realiza un análisis exploratorio completo y aplica limpieza de datos. 
+Además, desarrolla el **feature engineering** que se usará en los modelos de propensión y clustering.
+
+**2–6 Notebooks de propensión de compra (M1–M5)**  
+Cada uno de estos notebooks implementa la predicción de propensión de compra para un producto específico.
+ Incluyen **preprocesamiento**, rebalanceo de clases, comparación entre modelos, ajuste de hiperparámetros y predicción final.
+
+**7_Clustering_Model.ipynb**  
+Aquí se desarrolla la **segmentación de clientes** mediante K-Means. 
+Se realiza la selección de features relevantes y se determina la cantidad óptima de clusters mediante el método del codo (Elbow Curve).
+
+**8_Business_Proposal.ipynb**  
+Este notebook simula y diseña **campañas comerciales** basadas en los resultados de propensión y clustering. 
+Se calculan costes, beneficios y ROI esperado bajo distintos escenarios (pesimista, realista y optimista).
+
+
+## 👥 Autores
+
 Daniel Guidi
+
 Juan Manuel Guatta
-Miguel Angel García
+
+Miguel Ángel García
+
 Raphael Cheves
- Máster en Data Science & AI – Nuclio Digital School Barcelona, 2025
+
+**Máster en Data Science & AI – Nuclio Digital School, Barcelona 2025**
